@@ -10,14 +10,14 @@ $new-border-widhts:(
     10:10px
 );
 
-// $border-widths:map-merge( $border-widths, $new-border-widhts );
+$border-widths:map-merge( $border-widths, $new-border-widhts );
 
-// $new-spacer: 2.5rem;
-// $spacer: map-merge($spacer, $new-spacer );
+$new-padding: 2.5rem;
 
-
-// $new-grid-gutter-width:0.5rem;
-// $grid-gutter-width:map-merge($grid-gutter-width, $new-grid-gutter-width );
+$grid-gutter-width:0.5rem;
+$border-radius: 2rem;
+$input-btn-padding-x:$new-padding;
+$input-btn-padding-y:0.75rem;
 
 $new-danger: #ff0077;
 $new-info: #00ffea;
@@ -35,5 +35,18 @@ $new-theme-colors:(
     'epicode3': $epicode-3
 );
 $theme-colors: map-merge($theme-colors, $new-theme-colors );
+
+$new-grid-breakpoints:(
+    xxxl: 1600px,
+    xxxxl: 1800px
+);
+
+$grid-breakpoints:map-merge($grid-breakpoints, $new-grid-breakpoints );
+$new-container-max-widths:(
+    xxxl:1520px,
+    xxxxl:1720px
+);
+$container-max-widths:map-merge($container-max-widths, $new-container-max-widths );
+
 
 @import './scss/bootstrap.scss'
